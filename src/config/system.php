@@ -2,8 +2,8 @@
 
 return [
     [
-        'key' => 'sales.carriers.Pickup',
-        'name' => 'Picking up at the store',
+        'key' => 'sales.carriers.pickup',
+        'name' => 'pickup::app.admin.system.pickup',
         'sort' => 3,
         'fields' => [
           [
