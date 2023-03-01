@@ -1,4 +1,8 @@
-# Bagisto Pickup
+<p align="center">
+    <img src="https://bagisto.com/wp-content/themes/bagisto/images/logo.png" />
+    <h2 align="center">Bagisto Pickup</h2>
+</p>
+
 ![Packagist Downloads](https://img.shields.io/packagist/dt/digibytes/pickup) ![Packagist License](https://img.shields.io/packagist/l/digibytes/pickup)
 
 This extension allows your customers to collect their orders from your physical store.

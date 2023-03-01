@@ -15,7 +15,6 @@ class PickupServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__ . '/../config/system.php', 'core');
         $this->mergeConfigFrom(__DIR__ . '/../config/carriers.php', 'carriers');
-        //$this->mergeConfigFrom(dirname(__DIR__) . '/../config/admin-menu.php', 'menu.admin');
     }
 
     /**

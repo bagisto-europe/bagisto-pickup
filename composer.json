@@ -1,18 +1,28 @@
 {
     "name": "digibytes/pickup",
     "description": "Allow customers to pickup orders from your store",
-    "type": "library",
+    "homepage": "https://github.com/bagisto-europe/bagisto-pickup",
     "license": "MIT",
+    "keywords": [
+        "bagisto",
+        "laravel",
+        "shippping",
+        "shipping-methods",
+        "bagisto-shipping-methods"
+    ],
     "authors": [
         {
             "name": "Glenn Hermans",
-            "email": "info@digibytes.be"
+            "email": "info@bagisto.eu"
         }
     ],
     "autoload": {
         "psr-4": {
             "Digibytes\\Pickup\\": "src/"
         }
+    },
+    "config": {
+        "sort-packages": true
     },
     "extra": {
         "laravel": {
@@ -22,5 +32,6 @@
         }
     },
     "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {}
 }
