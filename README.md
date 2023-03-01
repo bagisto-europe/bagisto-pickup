@@ -3,7 +3,7 @@
     <h2 align="center">Bagisto Pickup</h2>
 </p>
 
-<p>
+<p align="center">
     <img alt="Packagist Downloads" src="https://img.shields.io/packagist/dt/digibytes/pickup"> <img alt="GitHub" src="https://img.shields.io/github/license/bagisto-europe/bagisto-pickup">
 </p>
 
