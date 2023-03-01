@@ -3,10 +3,11 @@
 namespace Digibytes\Pickup\Carriers;
 
 use Config;
-use Webkul\Checkout\Models\CartShippingRate;
-use Webkul\Shipping\Carriers\AbstractShipping;
 
+use Webkul\Checkout\Models\CartShippingRate;
 use Webkul\Inventory\Models\InventorySource;
+
+use Webkul\Shipping\Carriers\AbstractShipping;
 
 /**
  * Class Pickup.
@@ -48,26 +49,8 @@ class Pickup extends AbstractShipping
 
                 $pickupMethods[] = $pickup;
             }
-        } else {
-            if (empty($this->getConfigData('title'))) {
-                $title = __('pickup::app.admin.system.pickup');
-            } else {
-                $title = $this->getConfigData('title');
-            }
-
-            $pickup = new CartShippingRate;
-            
-            $pickup->carrier = 'pickup';
-            $pickup->carrier_title = __('pickup::app.admin.system.pickup');
-            $pickup->method = 'pickup_pickup';
-            $pickup->method_title = $title;
-            $pickup->method_description = $this->getConfigData('description');
-            $pickup->price = 0;
-            $pickup->base_price = 0;
-            
-            $pickupMethods[] = $pickup;            
         }
-
+        
         return $pickupMethods;
 
     }
@@ -83,25 +66,20 @@ class Pickup extends AbstractShipping
         $inventories = InventorySource::where('status', 1)->get();
 
         if (isset ($inventories)) {
-            if ($inventories->count() > 1 ) {
-                foreach ($inventories as $inventory) {
-                    if ($this->getConfigData('display_address')) {
-                        $description = $inventory->street . ' ' . $inventory->postcode . ' ' . $inventory->city . ' ' . $inventory->country;
-                    } else {
-                        $description = $this->getConfigData('description');
-                    }                   
-                    
-                    $inventoryData[$inventory->id] = [
-                        'title'       => $inventory->name,
-                        'description' => $description
-                    ];
+            foreach ($inventories as $inventory) {
+                if ($this->getConfigData('display_address')) {
+                    $description = $inventory->street . ' ' . $inventory->postcode . ' ' . $inventory->city . ' ' . $inventory->country;
+                } else {
+                    $description = $this->getConfigData('description');
                 }
-
-                return $inventoryData;
-            } else {
-                return false;
+                
+                $inventoryData[$inventory->id] = [
+                    'title'       => $inventory->name,
+                    'description' => $description
+                ];
             }
-
+            
+            return $inventoryData;
         } else {
             return false;
         }
