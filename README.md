@@ -3,9 +3,11 @@
     <h2 align="center">Bagisto Pickup</h2>
 </p>
 
-![Packagist Downloads](https://img.shields.io/packagist/dt/digibytes/pickup) ![Packagist License](https://img.shields.io/packagist/l/digibytes/pickup)
+<p>
+    <img alt="Packagist Downloads" src="https://img.shields.io/packagist/dt/digibytes/pickup"> <img alt="GitHub" src="https://img.shields.io/github/license/bagisto-europe/bagisto-pickup">
+</p>
 
-This extension allows your customers to collect their orders from your physical store.
+This extension allows your customers to collect their orders from your physical stores.
 
 ## Requirements
 - [Bagisto](https://github.com/bagisto/bagisto)
