@@ -22,7 +22,7 @@ Run the following command in the root of your Bagisto project:
 
 ### Step 1: Install the Package
 ```bash
-composer require bagisto-eu/bagisto-pickup
+composer require bagisto-eu/pickup
 ```
 
 ### Step 2: Install the Package with Artisan Command
