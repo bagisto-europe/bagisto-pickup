@@ -1,0 +1,44 @@
+{
+    "name": "bagisto-eu/pickup",
+    "description": "Allow customers to pickup orders from physical stores",
+    "homepage": "https://github.com/bagisto-europe/bagisto-pickup",
+    "license": "MIT",
+    "keywords": [
+        "bagisto",
+        "bagisto-shipping-methods",
+        "delivery-options",
+        "ecommerce",
+        "laravel",
+        "pickup",
+        "shipping",
+        "shipping-methods",
+        "store-pickup"
+    ],
+    "authors": [
+        {
+            "name": "Bagisto Europe",
+            "email": "info@bagisto.eu"
+        }
+    ],
+    "support": {
+        "email": "support@bagisto.eu"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bagisto\\Pickup\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": false
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Bagisto\\Pickup\\Providers\\PickupServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {}
+}
