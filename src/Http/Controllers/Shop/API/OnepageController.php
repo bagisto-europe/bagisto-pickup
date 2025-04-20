@@ -49,11 +49,12 @@ class OnepageController extends BaseOnepageController
 
     public function getAvailableTimeslots(Request $request): JsonResponse
     {
+        $pickupDate = $request->input('pickup_date');
+        
         // Convert pickup date to day of week (1 = Monday, 7 = Sunday)
         $dayOfWeek = Carbon::parse($pickupDate)->dayOfWeekIso;
         
         $pickupLocationId = $request->input('pickup_location');
-        $pickupDate = $request->input('pickup_date');
 
         $timeslots = PickupTimeslot::where('inventory_source_id', $pickupLocationId)
             ->where('pickup_day', $dayOfWeek)
