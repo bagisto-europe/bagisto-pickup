@@ -40,7 +40,7 @@
                                     class="relative max-w-[218px] select-none max-md:max-w-full max-md:flex-auto"
                                     v-for="rate in method.rates"
                                 >
-                                    <input 
+                                    <input
                                         type="radio"
                                         name="shipping_method"
                                         :id="rate.method"
@@ -49,13 +49,13 @@
                                         @change="store(rate.method)"
                                     >
 
-                                    <label 
+                                    <label
                                         class="icon-radio-unselect peer-checked:icon-radio-select absolute top-5 cursor-pointer text-2xl text-navyBlue ltr:right-5 rtl:left-5"
                                         :for="rate.method"
                                     >
                                     </label>
 
-                                    <label 
+                                    <label
                                         class="block cursor-pointer rounded-xl border border-zinc-200 p-5 max-sm:flex max-sm:gap-4 max-sm:rounded-lg max-sm:px-4 max-sm:py-2.5"
                                         :for="rate.method"
                                     >
@@ -65,7 +65,7 @@
                                             <p class="mt-1.5 text-2xl font-semibold max-md:text-base">
                                                 @{{ rate.base_formatted_price }}
                                             </p>
-                                            
+
                                             <p class="mt-2.5 text-xs font-medium max-md:mt-1 max-sm:mt-0 max-sm:font-normal max-sm:text-zinc-500">
                                                 <span class="font-medium">@{{ rate.method_title }}</span> - @{{ rate.method_description }}
                                             </p>
@@ -130,7 +130,7 @@
                                     this.pickupLocation = this.availableStores[0].id;
                                     this.storePickup(this.availableStores[0].id);
                                 }
-                                
+
                             }
                         })
                         .catch(error => {
@@ -142,27 +142,27 @@
                     if (!this.pickupDate) return;
                     this.noTimeslotsAvailable = false;
                     this.isTimeslotLoading = true;
-                    
+
                     console.log("Fetching available timeslots for date:", this.pickupDate);
                     console.log("Fetching available timeslots for location:", this.pickupLocation);
-                    
+
                     this.$axios.get("{{ route('checkout.pickup.timeslots') }}", {
                         params: {
                             pickup_location: this.pickupLocation,
-                            
+
                             pickup_date: this.pickupDate,
                         }
                     })
                     .then(response => {
                         this.availableTimeslots = response.data;
-                        
+
 
                         if (this.availableTimeslots.length === 0) {
                             this.noTimeslotsAvailable = true;
                         } else {
                             this.noTimeslotsAvailable = false;
                         }
-                        
+
                         console.log("Available Timeslots:", this.availableTimeslots);
 
                     })
@@ -233,7 +233,7 @@
                             console.error("Error storing pickup details:", error);
                         });
                 },
-                
+
             },
         });
     </script>

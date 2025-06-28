@@ -32,7 +32,7 @@ return [
                         'title'        => 'Teslimat Zaman Dilimleri',
                         'add-button'   => 'Teslimat Zaman Dilimi Ekle',
                         'no-timeslots' => 'Henüz teslimat zaman dilimi eklenmedi.',
-                        'filter' => [
+                        'filter'       => [
                             'title'            => 'Zaman Dilimlerini Filtrele',
                             'clear'            => 'Filtreleri Temizle',
                             'day'              => 'Gün',
@@ -46,7 +46,7 @@ return [
                             'day'                 => 'Gün',
                             'weekday'             => 'Haftanın Günü',
                             'date'                => 'Teslimat Tarihi',
-                            'pickup_quota'        => 'Teslimat Kotası:',
+                            'pickup_quota'        => 'Teslimat Kotası',
                             'start_time'          => 'Başlangıç Saati',
                             'end_time'            => 'Bitiş Saati',
                             'status'              => 'Durum',
@@ -55,7 +55,7 @@ return [
                             'delete'              => 'Sil',
                             'mass-delete'         => 'Sil',
                             'mass-delete-success' => 'Zaman dilimi başarıyla silindi.',
-                            'mass-delete-error'   => 'Zaman dilimi silinirken hata oluştu.'
+                            'mass-delete-error'   => 'Zaman dilimi silinirken hata oluştu.',
                         ],
                     ],
                     'create' => [

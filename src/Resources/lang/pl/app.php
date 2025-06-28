@@ -32,7 +32,7 @@ return [
                         'title'        => 'Godziny odbioru',
                         'add-button'   => 'Dodaj godzinę odbioru',
                         'no-timeslots' => 'Nie dodano jeszcze żadnych godzin odbioru.',
-                        'filter' => [
+                        'filter'       => [
                             'title'            => 'Filtruj godziny odbioru',
                             'clear'            => 'Wyczyść filtry',
                             'day'              => 'Dzień',
@@ -46,7 +46,7 @@ return [
                             'day'                 => 'Dzień',
                             'weekday'             => 'Dzień tygodnia',
                             'date'                => 'Data odbioru',
-                            'pickup_quota'        => 'Limit odbioru:',
+                            'pickup_quota'        => 'Limit odbioru',
                             'start_time'          => 'Godzina rozpoczęcia',
                             'end_time'            => 'Godzina zakończenia',
                             'status'              => 'Status',

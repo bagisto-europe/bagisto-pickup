@@ -39,7 +39,7 @@ class Install extends Command
                 label: 'Do you want to add some example pickup time slots to get started? (recommended for fresh installs)',
                 default: false,
             );
-    
+
             if ($seedDatabase) {
                 $this->seedPickupTimeslots();
             }

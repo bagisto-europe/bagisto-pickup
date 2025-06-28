@@ -32,7 +32,7 @@ return [
                         'title'        => 'Plages horaires de retrait',
                         'add-button'   => 'Ajouter une plage horaire de retrait',
                         'no-timeslots' => 'Aucune plage horaire n\'a été ajoutée pour le moment.',
-                        'filter' => [
+                        'filter'       => [
                             'title'            => 'Filtrer les plages horaires',
                             'clear'            => 'Effacer les filtres',
                             'day'              => 'Jour',
@@ -46,7 +46,7 @@ return [
                             'day'                 => 'Jour',
                             'weekday'             => 'Jour de la semaine',
                             'date'                => 'Date de retrait',
-                            'pickup_quota'        => 'Quota de retrait :',
+                            'pickup_quota'        => 'Quota de retrait',
                             'start_time'          => 'Heure de début',
                             'end_time'            => 'Heure de fin',
                             'status'              => 'Statut',

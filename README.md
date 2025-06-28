@@ -17,9 +17,6 @@
 ## Installation
 To install the package, you need to add it to your Bagisto project using Composer.
 
-### Install with composer
-Run the following command in the root of your Bagisto project:
-
 ### Step 1: Install the Package
 ```bash
 composer require bagisto-eu/pickup

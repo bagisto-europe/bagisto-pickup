@@ -32,7 +32,7 @@ return [
                         'title'        => '取货时间段',
                         'add-button'   => '添加取货时间段',
                         'no-timeslots' => '尚未添加取货时间段。',
-                        'filter' => [
+                        'filter'       => [
                             'title'            => '筛选取货时间段',
                             'clear'            => '清除筛选',
                             'day'              => '日期',
@@ -46,7 +46,7 @@ return [
                             'day'                 => '日期',
                             'weekday'             => '星期几',
                             'date'                => '取货日期',
-                            'pickup_quota'        => '取货配额:',
+                            'pickup_quota'        => '取货配额',
                             'start_time'          => '开始时间',
                             'end_time'            => '结束时间',
                             'status'              => '状态',

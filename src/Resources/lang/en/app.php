@@ -32,7 +32,7 @@ return [
                         'title'        => 'Pickup Timeslots',
                         'add-button'   => 'Add Pickup Timeslot',
                         'no-timeslots' => 'No timeslots have been added yet.',
-                        'filter' => [
+                        'filter'       => [
                             'title'            => 'Filter Timeslots',
                             'clear'            => 'Clear filters',
                             'day'              => 'Day',
@@ -46,7 +46,7 @@ return [
                             'day'                 => 'Day',
                             'weekday'             => 'Weekday',
                             'date'                => 'Pickup Date',
-                            'pickup_quota'        => 'Pickup Quota:',
+                            'pickup_quota'        => 'Pickup Quota',
                             'start_time'          => 'Start Time',
                             'end_time'            => 'End Time',
                             'status'              => 'Status',
@@ -55,7 +55,7 @@ return [
                             'delete'              => 'Delete',
                             'mass-delete'         => 'Delete',
                             'mass-delete-success' => 'Timeslot deleted successfully.',
-                            'mass-delete-error'   => 'Error deleting timeslot.'
+                            'mass-delete-error'   => 'Error deleting timeslot.',
                         ],
                     ],
                     'create' => [

@@ -32,7 +32,7 @@ return [
                         'title'        => 'Orari di ritiro',
                         'add-button'   => 'Aggiungi orario di ritiro',
                         'no-timeslots' => 'Nessun orario di ritiro aggiunto finora.',
-                        'filter' => [
+                        'filter'       => [
                             'title'            => 'Filtra orari di ritiro',
                             'clear'            => 'Rimuovi filtri',
                             'day'              => 'Giorno',
@@ -46,7 +46,7 @@ return [
                             'day'                 => 'Giorno',
                             'weekday'             => 'Giorno della settimana',
                             'date'                => 'Data di ritiro',
-                            'pickup_quota'        => 'Quota di ritiro:',
+                            'pickup_quota'        => 'Quota di ritiro',
                             'start_time'          => 'Ora di inizio',
                             'end_time'            => 'Ora di fine',
                             'status'              => 'Stato',

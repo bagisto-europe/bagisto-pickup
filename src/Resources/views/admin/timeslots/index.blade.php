@@ -34,19 +34,19 @@
                     <i class="icon icon-calendar text-5xl mb-4"></i>
                     <p class="text-lg font-semibold">@lang('pickup::app.admin.settings.pickup.timeslots.index.no-timeslots')</p>
 
-                </div>              
+                </div>
 
                 <!-- Timeslots per inventory -->
-                <div 
-                    v-for="(inventoryGroup, inventoryId) in grouped" 
-                    :key="inventoryId" 
+                <div
+                    v-for="(inventoryGroup, inventoryId) in grouped"
+                    :key="inventoryId"
                     class="bg-white p-2 dark:bg-gray-800 hover:shadow-2xl transition-all duration-300"
                     v-else
                 >
                     <h2 class="font-semibold mb-2 text-gray-800 dark:text-white">
                         @lang('pickup::app.admin.settings.pickup.timeslots.index.datagrid.inventory_source'): @{{ inventoryGroup.inventory_name }}
                     </h2>
-                
+
                     <div v-for="(slots, day) in inventoryGroup.days" :key="day" class="mb-2">
                         <x-admin::accordion :is-active="true">
                             <x-slot:header >
@@ -54,33 +54,33 @@
                                     @{{ day }}
                                 </h3>
                             </x-slot>
-                            
+
                             <x-slot:content>
                                 <div class="space-y-2 pl-4">
-                                    <div 
-                                        v-for="slot in slots" 
-                                        :key="slot.id" 
+                                    <div
+                                        v-for="slot in slots"
+                                        :key="slot.id"
                                         class="flex justify-between items-center bg-gray-100 dark:bg-gray-950 mb-2 px-4 py-3 border dark:border-gray-800 rounded shadow-sm hover:bg-gray-200 dark:hover:bg-gray-600 transition duration-200"
                                     >
                                         <div>
                                             <div class="font-medium text-gray-800 dark:text-white">
                                                 @{{ slot.start_time }} – @{{ slot.end_time }}
                                             </div>
-                                            
-                                            <div class="text-sm text-gray-500 dark:text-gray-300">
-                                                @lang('pickup::app.admin.settings.pickup.timeslots.index.datagrid.pickup_quota'): @{{ slot.pickup_quota }}
+
+                                            <div class="text-xs text-gray-500 dark:text-gray-300">
+                                                @lang('pickup::app.admin.settings.pickup.timeslots.index.datagrid.pickup_quota') @{{ slot.pickup_quota }}
                                             </div>
                                         </div>
-                            
+
                                         <div class="space-x-2">
                                             <button class="text-blue-600" @click="edit(slot)">
                                                 <i class="icon icon-edit"></i>
                                             </button>
-                                            
-                                            <button 
-                                                class="text-red-600" 
-                                                @click="remove(slot.id)" 
-                                                title="@lang('pickup::app.admin.settings.pickup.timeslots.index.delete')" 
+
+                                            <button
+                                                class="text-red-600"
+                                                @click="remove(slot.id)"
+                                                title="@lang('pickup::app.admin.settings.pickup.timeslots.index.delete')"
                                                 aria-label="@lang('pickup::app.admin.settings.pickup.timeslots.index.delete')"
                                             >
                                                 <i class="icon icon-delete"></i>
@@ -93,7 +93,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <!-- Right Component -->
             <div class="flex w-[360px] max-w-full flex-col gap-2 max-sm:w-full">
                 <h3 class="font-medium text-gray-800 dark:text-white mb-5 flex items-center">
@@ -110,46 +110,46 @@
                     <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">@lang('pickup::app.admin.settings.pickup.timeslots.index.filter.inventory_source')</label>
                     <div class="bg-white dark:bg-gray-900 p-3 rounded border dark:border-gray-700 max-h-[180px] overflow-y-auto">
                         <label class="flex items-center py-2 border-b dark:border-gray-700">
-                            <input 
-                                type="checkbox" 
+                            <input
+                                type="checkbox"
                                 value=""
-                                v-model="selectedInventorySource" 
+                                v-model="selectedInventorySource"
                                 class="mr-2 w-4 h-4 accent-blue-600"
                             >
-                            <span class="">All Inventories</span>
+                            <span class="text-gray-800 dark:text-gray-300">All Inventories</span>
                         </label>
-                        <label v-for="inventory in inventorySources" :key="inventory.id" class="flex items-center py-1 text-gray-600">
-                            <input 
-                                type="checkbox" 
-                                :value="inventory.id" 
-                                v-model="selectedInventorySource" 
+                        <label v-for="inventory in inventorySources" :key="inventory.id" class="flex items-center py-1 text-sm text-gray-600">
+                            <input
+                                type="checkbox"
+                                :value="inventory.id"
+                                v-model="selectedInventorySource"
                                 class="mr-2 w-4 h-4 accent-blue-600"
                             >
                             @{{ inventory.name }}
                         </label>
                     </div>
                 </div>
-                
+
                 {{-- Day Filter --}}
                 <div class="mb-4">
                     <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">@lang('pickup::app.admin.settings.pickup.timeslots.index.filter.day')</label>
                     <div class="bg-white dark:bg-gray-900 p-3 rounded border dark:border-gray-700">
                         <label class="flex items-center py-2 border-b dark:border-gray-700">
-                            <input 
-                                type="checkbox" 
+                            <input
+                                type="checkbox"
                                 value=""
-                                v-model="selectedDays" 
+                                v-model="selectedDays"
                                 class="mr-2 w-4 h-4 accent-gray-200"
                             >
-                            <span class="">All Days</span>
+                            <span class="text-gray-800 dark:text-gray-300">All Days</span>
                         </label>
-                        
+
                         <div class="flex flex-col gap-1">
-                            <label v-for="(name, index) in weekDays" :key="index" class="flex items-center py-1 text-gray-600">
-                                <input 
-                                    type="checkbox" 
-                                    :value="index.toString()" 
-                                    v-model="selectedDays" 
+                            <label v-for="(name, index) in weekDays" :key="index" class="flex items-center py-1 text-sm text-gray-600">
+                                <input
+                                    type="checkbox"
+                                    :value="index.toString()"
+                                    v-model="selectedDays"
                                     class="mr-2 w-4 h-4 accent-gray-200"
                                 >
                                 @{{ name }}
@@ -274,7 +274,7 @@
                         if (!showAllDays && !this.selectedDays.includes(dayIndex)) {
                             return;
                         }
-                        
+
                         // Initialize the inventory group if it doesn't exist
                         if (!grouped[inventoryId]) {
                             grouped[inventoryId] = {
@@ -358,11 +358,8 @@
                 },
 
                 refreshData() {
-                    // Fetch fresh data instead of reloading page
-
                     this.$axios.get("{{ route('admin.settings.pickup.timeslot.index') }}")
                         .then(response => {
-                            // Update the timeslots data
                             this.timeslots = response.data.timeslots;
                             this.groupByInventoryAndDay();
                         })

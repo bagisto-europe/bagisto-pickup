@@ -32,12 +32,12 @@ return [
                         'title'        => 'ピックアップ時間帯',
                         'add-button'   => 'ピックアップ時間帯を追加',
                         'no-timeslots' => 'まだピックアップ時間帯は追加されていません。',
-                        'filter' => [
+                        'filter'       => [
                             'title'            => 'ピックアップ時間帯をフィルタリング',
                             'clear'            => 'フィルターをクリア',
                             'day'              => '日',
                             'all_days'         => 'すべての日',
-                            'all_inventories' => 'すべての場所',
+                            'all_inventories'  => 'すべての場所',
                             'inventory_source' => '在庫ソース',
                         ],
                         'datagrid' => [
@@ -46,7 +46,7 @@ return [
                             'day'                 => '日',
                             'weekday'             => '曜日',
                             'date'                => 'ピックアップ日',
-                            'pickup_quota'        => 'ピックアップクォータ：',
+                            'pickup_quota'        => 'ピックアップクォータ',
                             'start_time'          => '開始時間',
                             'end_time'            => '終了時間',
                             'status'              => 'ステータス',

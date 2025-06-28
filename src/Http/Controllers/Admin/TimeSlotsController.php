@@ -3,14 +3,12 @@
 namespace Bagisto\Pickup\Http\Controllers\Admin;
 
 use Bagisto\Pickup\Models\PickupTimeslot;
-
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Validator;
-
 use Webkul\Inventory\Models\InventorySource;
 
 class TimeSlotsController extends Controller
@@ -22,8 +20,16 @@ class TimeSlotsController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function index()
+    public function index(Request $request)
     {
+        if ($request->ajax()) {
+            $timeslots = PickupTimeslot::with('inventory')->get();
+
+            return response()->json([
+                'timeslots' => $timeslots,
+            ]);
+        }
+
         $inventorySources = InventorySource::where('status', true)->get();
 
         $timeslots = PickupTimeslot::with('inventory')->get();

@@ -32,7 +32,7 @@ return [
                         'title'        => 'Horários de Retirada',
                         'add-button'   => 'Adicionar Horário de Retirada',
                         'no-timeslots' => 'Ainda não foram adicionados horários de retirada.',
-                        'filter' => [
+                        'filter'       => [
                             'title'            => 'Filtrar Horários de Retirada',
                             'clear'            => 'Limpar filtros',
                             'day'              => 'Dia',
@@ -46,7 +46,7 @@ return [
                             'day'                 => 'Dia',
                             'weekday'             => 'Dia da Semana',
                             'date'                => 'Data de Retirada',
-                            'pickup_quota'        => 'Cota de Retirada:',
+                            'pickup_quota'        => 'Cota de Retirada',
                             'start_time'          => 'Hora de Início',
                             'end_time'            => 'Hora de Fim',
                             'status'              => 'Status',
@@ -119,11 +119,11 @@ return [
     ],
     'week_days' => [
         1 => 'Segunda-feira',
-         2 => 'Terça-feira',
-         3 => 'Quarta-feira',
-         4 => 'Quinta-feira',
-         5 => 'Sexta-feira',
-         6 => 'Sábado',
-         7 => 'Domingo',
+        2 => 'Terça-feira',
+        3 => 'Quarta-feira',
+        4 => 'Quinta-feira',
+        5 => 'Sexta-feira',
+        6 => 'Sábado',
+        7 => 'Domingo',
     ],
 ];

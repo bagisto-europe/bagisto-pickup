@@ -32,7 +32,7 @@ return [
                         'title'        => 'Franges horàries de recollida',
                         'add-button'   => 'Afegir franja horària de recollida',
                         'no-timeslots' => 'Encara no s\'han afegit franges horàries.',
-                        'filter' => [
+                        'filter'       => [
                             'title'            => 'Filtrar franges horàries',
                             'clear'            => 'Esborrar filtres',
                             'day'              => 'Dia',
@@ -46,7 +46,7 @@ return [
                             'day'                 => 'Dia',
                             'weekday'             => 'Dia de la setmana',
                             'date'                => 'Data de recollida',
-                            'pickup_quota'        => 'Quota de recollida:',
+                            'pickup_quota'        => 'Quota de recollida',
                             'start_time'          => 'Hora d\'inici',
                             'end_time'            => 'Hora de finalització',
                             'status'              => 'Estat',

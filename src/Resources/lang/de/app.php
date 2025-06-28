@@ -32,7 +32,7 @@ return [
                         'title'        => 'Abholzeiten',
                         'add-button'   => 'Abholzeit hinzufügen',
                         'no-timeslots' => 'Es wurden noch keine Abholzeiten hinzugefügt.',
-                        'filter' => [
+                        'filter'       => [
                             'title'            => 'Abholzeiten filtern',
                             'clear'            => 'Filter löschen',
                             'day'              => 'Tag',
@@ -46,7 +46,7 @@ return [
                             'day'                 => 'Tag',
                             'weekday'             => 'Wochentag',
                             'date'                => 'Abholdatum',
-                            'pickup_quota'        => 'Abholquote:',
+                            'pickup_quota'        => 'Abholquote',
                             'start_time'          => 'Startzeit',
                             'end_time'            => 'Endzeit',
                             'status'              => 'Status',

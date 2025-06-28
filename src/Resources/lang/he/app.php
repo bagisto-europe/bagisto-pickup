@@ -32,7 +32,7 @@ return [
                         'title'        => 'זמני איסוף',
                         'add-button'   => 'הוסף זמן איסוף',
                         'no-timeslots' => 'לא הוספו זמני איסוף עדיין.',
-                        'filter' => [
+                        'filter'       => [
                             'title'            => 'סנן זמני איסוף',
                             'clear'            => 'נקה סינונים',
                             'day'              => 'יום',
@@ -46,7 +46,7 @@ return [
                             'day'                 => 'יום',
                             'weekday'             => 'יום בשבוע',
                             'date'                => 'תאריך איסוף',
-                            'pickup_quota'        => 'מכסת איסוף:',
+                            'pickup_quota'        => 'מכסת איסוף',
                             'start_time'          => 'שעת התחלה',
                             'end_time'            => 'שעת סיום',
                             'status'              => 'סטטוס',
